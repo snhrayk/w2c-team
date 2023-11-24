@@ -95,6 +95,7 @@ body > p{
     height: 606px;
     margin: 0 auto;
     margin-bottom: 500px;
+
     animation: BoxShadow 2s infinite;
 }
 @keyframes BoxShadow{
