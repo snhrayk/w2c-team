@@ -3,6 +3,32 @@
     padding: 0;
     overflow-x: hidden;
 }
+.rainbow{
+    background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783,#e60000) 0 / 200%;
+    animation: color 8s linear infinite;
+}
+@keyframes color{
+    0%{
+        color: #333;
+    }
+    20%{
+        color: tomato;
+    }
+    40%{
+        color: greenyellow;
+    }
+    60%{
+        color: lightblue;
+    }
+    80%{
+        color: palevioletred;
+    }
+    100%{
+        color: #333;
+        background-position: 200%;
+    }
+}
+
 body{
     position: relative;
 }
@@ -84,18 +110,25 @@ header > div > p > a:hover::after{
         right: 0;
     }
 }
-body > p{
+body > section > p{
     width: 100%;
     font-size: 32px;
     text-align: center;
     margin: 280px 0;
+    color: #333;
+}
+section{
+    width: 100%;
+    height: 706px;
+    overflow: hidden;
+    margin-bottom: 300px;
+    opacity: 0;
 }
 .Introduction{
     width: 903px;
     height: 606px;
     margin: 0 auto;
-    margin-bottom: 500px;
-
+    margin-top: 30px;
     animation: BoxShadow 2s infinite;
 }
 @keyframes BoxShadow{
@@ -165,4 +198,15 @@ footer{
 small{
     color: #fff;
     font-size: 40px;
+}
+.FadeIn{
+    animation: FadeIn 5s forwards;
+}
+@keyframes FadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
