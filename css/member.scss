@@ -21,6 +21,7 @@ header {
     ul {
         display: flex;
         list-style: none;
+        margin: 0 0 50px 0;
 
         li {
             font-size: 2rem;
@@ -31,6 +32,7 @@ header {
                 display: block;
                 text-decoration: none;
                 color: white;
+                padding: 10px 30px;
                 position: relative;
                 // top: 0;
                 // right: 0;
@@ -38,7 +40,7 @@ header {
                 // bottom: 0;
 
                 a::after {
-                    content: "";
+                    content: '';
                     position: absolute;
                     bottom: 0;
                     left: 10%;
@@ -60,13 +62,13 @@ header {
             }
         }
 
-        .topMenu {
-            padding-right: 96px;
-        }
+        // .topMenu {
+        //     padding-right: 96px;
+        // }
 
-        .memberMenu {
-            padding-right: 27px;
-        }
+        // .memberMenu {
+        //     padding-right: 27px;
+        // }
     }
 }
 
