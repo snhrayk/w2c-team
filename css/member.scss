@@ -95,11 +95,13 @@ main {
                 font-size: 4rem;
                 padding-left: 166px;
                 padding-top: 300px;
+                position: absolute;
+                z-index: 800;
             }
         }
 
         .mvRight {
-            width: 75%;
+            width: 60%;
             height: 100%;
             background: rgb(222, 239, 255);
             background: linear-gradient(45deg, rgba(222, 239, 255, 1) 33%, rgba(80, 164, 240, 1) 100%);
@@ -107,6 +109,14 @@ main {
             position: absolute;
             top: 0;
             right: 0;
+            z-index: 700;
+            transition: width 1s ease-in;
+
+            &:hover {
+                width: 150%;
+                background: rgb(222, 239, 255);
+                background: linear-gradient(45deg, rgba(222, 239, 255, 1) 33%, rgba(80, 164, 240, 1) 100%);
+            }
         }
     }
 
@@ -137,6 +147,16 @@ main {
                 // border: 1px solid tomato;
                 margin-bottom: 100px;
                 box-shadow: 20px 20px 20px rgba(212, 212, 212, 0.40);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(50px);
+                transition: all 1s;
+
+                &.is-show {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0px);
+                }
 
                 h4 {
                     font-size: 2.4rem;
@@ -190,6 +210,17 @@ main {
                 // border: 1px solid tomato;
                 margin-bottom: 100px;
                 box-shadow: 20px 20px 20px rgba(212, 212, 212, 0.40);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 1s;
+                transform: translateY(50px);
+
+
+                &.is-show {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0px);
+                }
 
                 h4 {
                     font-size: 2.4rem;

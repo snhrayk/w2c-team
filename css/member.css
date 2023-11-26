@@ -74,9 +74,11 @@ main .mainVisual .mvLeft h2 {
   font-size: 4rem;
   padding-left: 166px;
   padding-top: 300px;
+  position: absolute;
+  z-index: 800;
 }
 main .mainVisual .mvRight {
-  width: 75%;
+  width: 60%;
   height: 100%;
   background: rgb(222, 239, 255);
   background: linear-gradient(45deg, rgb(222, 239, 255) 33%, rgb(80, 164, 240) 100%);
@@ -85,6 +87,13 @@ main .mainVisual .mvRight {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 700;
+  transition: width 1s ease-in;
+}
+main .mainVisual .mvRight:hover {
+  width: 150%;
+  background: rgb(222, 239, 255);
+  background: linear-gradient(45deg, rgb(222, 239, 255) 33%, rgb(80, 164, 240) 100%);
 }
 main .memberListWrap {
   width: 100%;
@@ -111,6 +120,15 @@ main .memberListWrap .memberTop .memberList {
   overflow: hidden;
   margin-bottom: 100px;
   box-shadow: 20px 20px 20px rgba(212, 212, 212, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: all 1s;
+}
+main .memberListWrap .memberTop .memberList.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 main .memberListWrap .memberTop .memberList h4 {
   font-size: 2.4rem;
@@ -156,6 +174,15 @@ main .memberListWrap .memberBottom .memberList {
   overflow: hidden;
   margin-bottom: 100px;
   box-shadow: 20px 20px 20px rgba(212, 212, 212, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+  transform: translateY(50px);
+}
+main .memberListWrap .memberBottom .memberList.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 main .memberListWrap .memberBottom .memberList h4 {
   font-size: 2.4rem;
