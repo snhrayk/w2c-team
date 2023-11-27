@@ -74,7 +74,13 @@ header > div > p > a::after{
 header > div > p > a:hover::after{
     transform: scale(1, 1);
 }
-
+#rainbow{
+    color: hsla(209, 85%, 63%, 1);
+    transition: 1s;
+}
+#rainbow:hover{
+    color: #fff;
+}
 
 .FirstView{
     margin-top: 8vh;
