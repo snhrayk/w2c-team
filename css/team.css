@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.rainbow{
+    background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783,#e60000) 0 / 200%;
+    animation: color 8s linear infinite;
+}
+@keyframes color{
+    0%{
+        color: #333;
+    }
+    20%{
+        color: tomato;
+    }
+    40%{
+        color: greenyellow;
+    }
+    60%{
+        color: lightblue;
+    }
+    80%{
+        color: palevioletred;
+    }
+    100%{
+        color: #333;
+        background-position: 200%;
+    }
+}
+
+body{
+    position: relative;
+}
+header{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 8vh;
+    padding-left: 20px;
+    background-color: hsla(209, 85%, 63%, 1);
+    color: hsla(0, 0%, 100%, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header > div{
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 100px;
+    margin-right: 40px;
+}
+header > div > p > a{
+    position: relative;
+    font-size: 24px;
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, 1);
+}
+header > div > p > a::after{
+    content: '';
+    position: absolute;
+    z-index: 1001;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;
+}
+header > div > p > a:hover::after{
+    transform: scale(1, 1);
+}
+
+
+.FirstView{
+    margin-top: 8vh;
+    width: 100%;
+    height: 92vh;
+    position: relative;
+}
+.FirstView > div{
+    width: 100%;
+    height: 100%;
+}
+
+.FirstView > div > h2{
+    line-height: 600px;
+    padding-left: 200px;
+    font-size: 40px;
+}
+.Gradation{
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    width: 1000px;
+    height: 92vh;
+    background: linear-gradient(245.6deg, #50A4F0 3.02%, rgba(222, 239, 255, 0.33) 99.96%);
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    animation: Gradation 1s forwards;
+}
+@keyframes Gradation{
+    0%{
+        right: -1000px;
+    }
+    100%{
+        right: 0;
+    }
+}
+body > section > p{
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+    margin: 280px 0;
+    color: #333;
+}
+section{
+    width: 100%;
+    height: 706px;
+    overflow: hidden;
+    margin-bottom: 300px;
+    opacity: 0;
+}
+.Introduction{
+    width: 903px;
+    height: 606px;
+    margin: 0 auto;
+    margin-top: 30px;
+    animation: BoxShadow 2s infinite;
+}
+@keyframes BoxShadow{
+    0%{
+        box-shadow: -5px -5px 15px 5px rgba(0, 90, 255, 0.8), 5px 5px 15px 7px rgba(0, 213, 83, 0.8);
+    }
+    25%{
+        box-shadow:  10px -5px 15px 5px rgba(0, 90, 255, 0.8), -10px 5px 15px 7px rgba(0, 213, 83, 0.8);
+    }
+    50%{
+        box-shadow: 10px 1px 15px 5px rgba(0, 90, 255, 0.8), -10px -5px 15px 7px rgba(0, 213, 83, 0.8);
+    }
+    75%{
+        box-shadow: -10px 5px 15px 5px rgba(0, 90, 255, 0.8), 10px -5px 15px 7px rgba(0, 213, 83, 0.8);
+    }
+    100%{
+        box-shadow: -5px -5px 15px 5px rgba(0, 90, 255, 0.8), 5px 5px 15px 7px rgba(0, 213, 83, 0.8);
+    }
+}
+
+
+.Heading{
+    width: 100%;
+    height: 64px;
+    background-color: hsla(209, 85%, 63%, 1);
+}
+.Heading > h3{
+    font-size: 32px;
+    color: hsla(0, 0%, 100%, 1);
+    text-align: center;
+    line-height: 64px;
+}
+.Iimg{
+    width: 100%;
+    height: 68%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Iimg > div{
+    width: 320px;
+    height: 240px;
+    overflow: hidden;
+}
+.Iimg img{
+    width: 100%;
+    height: 100%;
+    transition: all 2s ease;
+    overflow: hidden;
+}
+.Iimg img:hover{
+    transform: scale(5);
+}
+.Introduction > p{
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+footer{
+    width: 100%;
+    height: 342px;
+    background-color: #50A4F0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+small{
+    color: #fff;
+    font-size: 40px;
+}
+.FadeIn{
+    animation: FadeIn 5s forwards;
+}
+@keyframes FadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
